@@ -47,14 +47,14 @@ public class MonopolyGame {
         board.createLand("幸福春天", 3000, 5);
         board.createLand("虹桥华庭", 6000, 6);
         board.createLand("天山河畔花园", 5000, 7);
-        board.createLand("瑞仕花园", 10000, 8);
+        //board.createLand("瑞仕花园", 10000, 8);
         board.createRestSquare("洗浴中心", 2, 9);
         board.createLand("河风丽景", 6000, 10);
         board.createLand("海逸公寓", 3000, 11);
         board.createLand("上海加州花园", 3000, 12);
         board.createLand("新风尚", 3000, 13);
         board.createRestSquare("洗浴中心", 1, 14);
-        board.createLand("水岸家苑", 3000, 15);
+        //board.createLand("水岸家苑", 3000, 15);
         board.createLand("金海湾别墅", 3000, 16);
         board.createLand("文治福邸", 3000, 17);
         board.createLand("虹口嘉苑", 4000, 18);

@@ -101,19 +101,19 @@ public class GameUI {
         gbc_panel_7.gridy = 1;
         mapPanel.add(panel_7, gbc_panel_7);
 
-        JPanel panel_8 = new JPanel();
-        GridBagConstraints gbc_panel_8 = new GridBagConstraints();
-        gbc_panel_8.insets = new Insets(0, 0, 5, 5);
-        gbc_panel_8.fill = GridBagConstraints.BOTH;
-        gbc_panel_8.gridx = 9;
-        gbc_panel_8.gridy = 1;
-        mapPanel.add(panel_8, gbc_panel_8);
+//        JPanel panel_8 = new JPanel();
+//        GridBagConstraints gbc_panel_8 = new GridBagConstraints();
+//        gbc_panel_8.insets = new Insets(0, 0, 5, 5);
+//        gbc_panel_8.fill = GridBagConstraints.BOTH;
+//        gbc_panel_8.gridx = 9;
+//        gbc_panel_8.gridy = 1;
+//        mapPanel.add(panel_8, gbc_panel_8);
 
         JPanel panel_9 = new JPanel();
         GridBagConstraints gbc_panel_9 = new GridBagConstraints();
         gbc_panel_9.insets = new Insets(0, 0, 5, 5);
         gbc_panel_9.fill = GridBagConstraints.BOTH;
-        gbc_panel_9.gridx = 10;
+        gbc_panel_9.gridx = 9;
         gbc_panel_9.gridy = 1;
         mapPanel.add(panel_9, gbc_panel_9);
 
@@ -129,7 +129,7 @@ public class GameUI {
         GridBagConstraints gbc_panel_10 = new GridBagConstraints();
         gbc_panel_10.insets = new Insets(0, 0, 5, 5);
         gbc_panel_10.fill = GridBagConstraints.BOTH;
-        gbc_panel_10.gridx = 10;
+        gbc_panel_10.gridx = 9;
         gbc_panel_10.gridy = 2;
         mapPanel.add(panel_10, gbc_panel_10);
 
@@ -145,7 +145,7 @@ public class GameUI {
         GridBagConstraints gbc_panel_11 = new GridBagConstraints();
         gbc_panel_11.insets = new Insets(0, 0, 5, 5);
         gbc_panel_11.fill = GridBagConstraints.BOTH;
-        gbc_panel_11.gridx = 10;
+        gbc_panel_11.gridx = 9;
         gbc_panel_11.gridy = 3;
         mapPanel.add(panel_11, gbc_panel_11);
 
@@ -161,7 +161,7 @@ public class GameUI {
         GridBagConstraints gbc_panel_12 = new GridBagConstraints();
         gbc_panel_12.insets = new Insets(0, 0, 5, 5);
         gbc_panel_12.fill = GridBagConstraints.BOTH;
-        gbc_panel_12.gridx = 10;
+        gbc_panel_12.gridx = 9;
         gbc_panel_12.gridy = 4;
         mapPanel.add(panel_12, gbc_panel_12);
 
@@ -177,7 +177,7 @@ public class GameUI {
         GridBagConstraints gbc_panel_13 = new GridBagConstraints();
         gbc_panel_13.insets = new Insets(0, 0, 5, 5);
         gbc_panel_13.fill = GridBagConstraints.BOTH;
-        gbc_panel_13.gridx = 10;
+        gbc_panel_13.gridx = 9;
         gbc_panel_13.gridy = 5;
         mapPanel.add(panel_13, gbc_panel_13);
 
@@ -245,19 +245,19 @@ public class GameUI {
         gbc_panel_16.gridy = 6;
         mapPanel.add(panel_16, gbc_panel_16);
 
-        JPanel panel_15 = new JPanel();
-        GridBagConstraints gbc_panel_15 = new GridBagConstraints();
-        gbc_panel_15.insets = new Insets(0, 0, 5, 5);
-        gbc_panel_15.fill = GridBagConstraints.BOTH;
-        gbc_panel_15.gridx = 9;
-        gbc_panel_15.gridy = 6;
-        mapPanel.add(panel_15, gbc_panel_15);
+//        JPanel panel_15 = new JPanel();
+//        GridBagConstraints gbc_panel_15 = new GridBagConstraints();
+//        gbc_panel_15.insets = new Insets(0, 0, 5, 5);
+//        gbc_panel_15.fill = GridBagConstraints.BOTH;
+//        gbc_panel_15.gridx = 9;
+//        gbc_panel_15.gridy = 6;
+//        mapPanel.add(panel_15, gbc_panel_15);
 
         JPanel panel_14 = new JPanel();
         GridBagConstraints gbc_panel_14 = new GridBagConstraints();
         gbc_panel_14.insets = new Insets(0, 0, 5, 5);
         gbc_panel_14.fill = GridBagConstraints.BOTH;
-        gbc_panel_14.gridx = 10;
+        gbc_panel_14.gridx = 9;
         gbc_panel_14.gridy = 6;
         mapPanel.add(panel_14, gbc_panel_14);
 
@@ -352,9 +352,9 @@ public class GameUI {
         JTextPane textPane_7 = new JTextPane();
         textPane_7.setText(monopolyGame.getBoard().getSquares().get(7).getName());
         panel_7.add(textPane_7);
-        JTextPane textPane_8 = new JTextPane();
-        textPane_8.setText(monopolyGame.getBoard().getSquares().get(8).getName());
-        panel_8.add(textPane_8);
+//        JTextPane textPane_8 = new JTextPane();
+//        textPane_8.setText(monopolyGame.getBoard().getSquares().get(8).getName());
+//        panel_8.add(textPane_8);
         JTextPane textPane_9 = new JTextPane();
         textPane_9.setText(monopolyGame.getBoard().getSquares().get(9).getName());
         panel_9.add(textPane_9);
@@ -373,9 +373,9 @@ public class GameUI {
         JTextPane textPane_14 = new JTextPane();
         textPane_14.setText(monopolyGame.getBoard().getSquares().get(14).getName());
         panel_14.add(textPane_14);
-        JTextPane textPane_15 = new JTextPane();
-        textPane_15.setText(monopolyGame.getBoard().getSquares().get(15).getName());
-        panel_15.add(textPane_15);
+//        JTextPane textPane_15 = new JTextPane();
+//        textPane_15.setText(monopolyGame.getBoard().getSquares().get(15).getName());
+//        panel_15.add(textPane_15);
         JTextPane textPane_16 = new JTextPane();
         textPane_16.setText(monopolyGame.getBoard().getSquares().get(16).getName());
         panel_16.add(textPane_16);
@@ -415,8 +415,8 @@ public class GameUI {
 
 
         final JPanel panellist[] = {
-                panel, panel_1, panel_2, panel_3, panel_4, panel_5, panel_6, panel_7, panel_8, panel_9, panel_10, panel_11,
-                panel_12, panel_13, panel_14, panel_15, panel_16, panel_17, panel_18, panel_19, panel_20, panel_21, panel_22,
+                panel, panel_1, panel_2, panel_3, panel_4, panel_5, panel_6, panel_7, panel_9, panel_10, panel_11,
+                panel_12, panel_13, panel_14, panel_16, panel_17, panel_18, panel_19, panel_20, panel_21, panel_22,
                 panel_23, panel_24, panel_25, panel_26, panel_27, panel_26, panel_27
         };
 
