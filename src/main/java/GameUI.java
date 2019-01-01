@@ -444,23 +444,31 @@ public class GameUI {
 
         cupButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if (flag == 0) {
+                Player player = monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId());
+                int currentPlayerID= player.getId();
+
+                if (player.getRestTime() > 0){
                     flag = 1;
-                    monopolyGame.getCup().roll();
-                    int currentPlayerID=monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getId();
-                    if (!monopolyGame.moveCurrentPlayer()) {
-                        JOptionPane.showMessageDialog(null, "这个人破产了", "提示", JOptionPane.ERROR_MESSAGE);
-                        noPlayer = 1;
-                        labelList[currentPlayerID].setVisible(false);
-                        frame.repaint();
-                    } else {
-                        textPane.setText(monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).playerInfo() + "============\n" + monopolyGame.getBoard().getSquares().get(monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation()).getInfo());
-                        //System.out.println(monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation());
-                        panellist[monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation()].add(labelList[monopolyGame.getCurrentPlayerId()]);
-                        frame.repaint();
-                    }
+                    player.decreaseRestTime();
+                    JOptionPane.showMessageDialog(null, "别急,你正在洗浴中心休息", "提示", JOptionPane.ERROR_MESSAGE);
                 } else {
-                    JOptionPane.showMessageDialog(null, "你已经掷过骰子了你不知道吗", "提示", JOptionPane.ERROR_MESSAGE);
+                    if (flag == 0) {
+                        flag = 1;
+                        monopolyGame.getCup().roll();
+                        if (!monopolyGame.moveCurrentPlayer()) {
+                            JOptionPane.showMessageDialog(null, "这个人破产了", "提示", JOptionPane.ERROR_MESSAGE);
+                            noPlayer = 1;
+                            labelList[currentPlayerID].setVisible(false);
+                            frame.repaint();
+                        } else {
+                            textPane.setText(monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).playerInfo() + "============\n" + monopolyGame.getBoard().getSquares().get(monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation()).getInfo());
+                            //System.out.println(monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation());
+                            panellist[monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation()].add(labelList[monopolyGame.getCurrentPlayerId()]);
+                            frame.repaint();
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "你已经掷过骰子了你不知道吗", "提示", JOptionPane.ERROR_MESSAGE);
+                    }
                 }
             }
         });

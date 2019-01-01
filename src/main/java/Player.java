@@ -25,6 +25,10 @@ public class Player {
         this.restTime = restTime;
     }
 
+    public void decreaseRestTime() {
+        this.restTime -= 1;
+    }
+
     public int getCurrentLocation() {
         return currentLocation;
     }

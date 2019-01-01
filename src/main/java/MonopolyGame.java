@@ -53,7 +53,7 @@ public class MonopolyGame {
         board.createLand("海逸公寓", 3000, 10);
         board.createLand("上海加州花园", 3000, 11);
         board.createLand("新风尚", 3000, 12);
-        board.createRestSquare("洗浴中心", 1, 13);
+        board.createRestSquare("洗浴中心", 2, 13);
         //board.createLand("水岸家苑", 3000, 15);
         board.createLand("金海湾别墅", 3000, 14);
         board.createLand("文治福邸", 3000, 15);
