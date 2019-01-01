@@ -1,4 +1,6 @@
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 /**
  * @author Andrew Dong
@@ -11,11 +13,13 @@ public class MonopolyGame {
     private Cup cup;
     private HashMap<String, Character> characters;
     private HashMap<Integer, Player> players;
+    private HashMap<Integer, RandomEvent> events;
 
     public void init(){
         this.currentPlayerId = 0;
         this.characters = new HashMap<String, Character>();
         this.players = new HashMap<Integer, Player>();
+        this.events = new HashMap<Integer, RandomEvent>();
 
         this.createBoard();
         System.out.println("初始化board完成");
@@ -35,6 +39,18 @@ public class MonopolyGame {
 
         this.createCup();
         System.out.println("初始化cup完成");
+
+        this.createEvent();
+        System.out.println("初始化随机事件完成");
+    }
+
+    public void createEvent(){
+        IncreaseCashEvent increaseCashEvent = new IncreaseCashEvent();
+        increaseCashEvent.setInfo("你在马路边捡到了2000元并占为己有");
+        events.put(1, increaseCashEvent);
+        RestEvent restEvent = new RestEvent();
+        restEvent.setInfo("你的车胎爆炸了，强制休息两回合");
+        events.put(2, restEvent);
     }
 
     public void createBoard(){
@@ -244,5 +260,9 @@ public class MonopolyGame {
 
     public void setPlayers(HashMap<Integer, Player> players) {
         this.players = players;
+    }
+
+    public HashMap<Integer, RandomEvent> getEvents() {
+        return events;
     }
 }

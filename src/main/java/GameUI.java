@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 /**
  * @author Andrew Dong
@@ -450,7 +451,7 @@ public class GameUI {
                 if (player.getRestTime() > 0){
                     flag = 1;
                     player.decreaseRestTime();
-                    JOptionPane.showMessageDialog(null, "别急,你正在洗浴中心休息", "提示", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "别急,你还不能行动", "提示", JOptionPane.ERROR_MESSAGE);
                 } else {
                     if (flag == 0) {
                         flag = 1;
@@ -465,6 +466,11 @@ public class GameUI {
                             //System.out.println(monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation());
                             panellist[monopolyGame.getPlayers().get(monopolyGame.getCurrentPlayerId()).getCurrentLocation()].add(labelList[monopolyGame.getCurrentPlayerId()]);
                             frame.repaint();
+                            int event = new Random().nextInt(20) + 1;
+                            if (event <= 2){//随机事件
+                                JOptionPane.showMessageDialog(null, monopolyGame.getEvents().get(event).getInfo(), "提示", JOptionPane.ERROR_MESSAGE);
+                                monopolyGame.getEvents().get(event).doRandomEvent(monopolyGame.getPlayers(), monopolyGame.getCurrentPlayerId());
+                            }
                         }
                     } else {
                         JOptionPane.showMessageDialog(null, "你已经掷过骰子了你不知道吗", "提示", JOptionPane.ERROR_MESSAGE);
