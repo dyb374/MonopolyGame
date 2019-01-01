@@ -48,25 +48,25 @@ public class MonopolyGame {
         board.createLand("虹桥华庭", 6000, 6);
         board.createLand("天山河畔花园", 5000, 7);
         //board.createLand("瑞仕花园", 10000, 8);
-        board.createRestSquare("洗浴中心", 2, 9);
-        board.createLand("河风丽景", 6000, 10);
-        board.createLand("海逸公寓", 3000, 11);
-        board.createLand("上海加州花园", 3000, 12);
-        board.createLand("新风尚", 3000, 13);
-        board.createRestSquare("洗浴中心", 1, 14);
+        board.createRestSquare("洗浴中心", 2, 8);
+        board.createLand("河风丽景", 6000, 9);
+        board.createLand("海逸公寓", 3000, 10);
+        board.createLand("上海加州花园", 3000, 11);
+        board.createLand("新风尚", 3000, 12);
+        board.createRestSquare("洗浴中心", 1, 13);
         //board.createLand("水岸家苑", 3000, 15);
-        board.createLand("金海湾别墅", 3000, 16);
-        board.createLand("文治福邸", 3000, 17);
-        board.createLand("虹口嘉苑", 4000, 18);
-        board.createLand("香港丽园", 3000, 19);
-        board.createLand("自由自宅", 4000, 20);
-        board.createLand("虹口金地汇", 3000, 21);
-        board.createLand("奎江公寓", 5000, 22);
-        board.createLand("明珠家园", 3000, 23);
-        board.createLand("淮海中华大厦", 4000, 24);
-        board.createLand("安基大厦", 3000, 25);
-        board.createLand("耀江花园", 6000, 26);
-        board.createLand("阳光翠竹苑", 3000, 27);
+        board.createLand("金海湾别墅", 3000, 14);
+        board.createLand("文治福邸", 3000, 15);
+        board.createLand("虹口嘉苑", 4000, 16);
+        board.createLand("香港丽园", 3000, 17);
+        board.createLand("自由自宅", 4000, 18);
+        board.createLand("虹口金地汇", 3000, 19);
+        board.createLand("奎江公寓", 5000, 20);
+        board.createLand("明珠家园", 3000, 21);
+        board.createLand("淮海中华大厦", 4000, 22);
+        board.createLand("安基大厦", 3000, 23);
+        board.createLand("耀江花园", 6000, 24);
+        board.createLand("阳光翠竹苑", 3000, 25);
     }
 
     /**
@@ -191,7 +191,7 @@ public class MonopolyGame {
         for (Map.Entry<Integer, Square> entry : entrySet){
             if (entry.getValue() instanceof Land){
                 Land land = (Land) entry.getValue();
-                if (land.getOwnerId() == id){
+                if (land.getOwnerId().equals(id)){
                     ((Land) board.getSquares().get(entry.getKey())).setOwnerId(-1);
                     ((Land) board.getSquares().get(entry.getKey())).setHotelNum(0);
                 }
